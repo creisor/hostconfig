@@ -1,0 +1,6 @@
+---
+# note: should this just be localhost to make life easier?
+- hosts: laptops
+  #gather_facts: no
+  roles:
+    - { role: common, tags: ['common'] }

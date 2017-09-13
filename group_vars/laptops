@@ -1,0 +1,19 @@
+---
+void_packages:
+  - socklog-void
+  - ansible
+  - xorg
+  - xterm
+  - lightdm
+  - lightdm-gtk3-greeter
+  - xinit
+  - base-devel
+  - xfce4
+  - git
+  - tmux
+  - dropbox
+  - vim
+  - gvim
+
+pip_packages:
+  - nvpy
