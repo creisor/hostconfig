@@ -1,9 +1,9 @@
 ---
-name: install packages
+- name: install packages
   package:
     name: "{{item}}"
     state: latest
     #use: xbps
-with_items: "{{void_packages}}"
+  with_items: "{{void_packages}}"
 
 # pip: pip install nvpy

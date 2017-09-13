@@ -12,5 +12,13 @@ This role was initialized with
     ansbile-galaxy init common
 
 ## TODO
+* fonts
+  * Inconsolata (Google fonts)
 * audio
+  * sonic-pi
 * graphics
+  * gimp
+* video
+  * WidevineCdm
+  * shotcut
+* pyenv / rbenv
