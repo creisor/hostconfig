@@ -9,6 +9,7 @@ void_packages:
   - xinit
   - base-devel
   - xfce4
+  - xsel
   - git
   - tmux
   - dropbox

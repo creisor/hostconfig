@@ -12,6 +12,7 @@ This role was initialized with
     ansbile-galaxy init common
 
 ## TODO
+* dotfiles
 * fonts
   * Inconsolata (Google fonts)
 * audio
