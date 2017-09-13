@@ -9,11 +9,13 @@ void_packages:
   - xinit
   - base-devel
   - xfce4
+  - xsel
   - git
   - tmux
   - dropbox
   - vim
   - gvim
+  - supercollider
 
 pip_packages:
   - nvpy
