@@ -1,0 +1,20 @@
+---
+- name: install packages
+  package:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{vim_packages}}"
+
+- name: clone vimrc repo
+  git:
+    repo: git@github.com:creisor/.vim.git
+    dest: "/home/{{laptop_user}}/.vim"
+    accept_hostkey: yes
+
+- name: symlink .vimrc
+  file:
+    src: "/home/{{laptop_user}}/.vim/vimrc"
+    dest: "/home/{{laptop_user}}/.vimrc"
+    owner: "{{laptop_user}}"
+    group: "{{laptop_user}}"
+    state: link

@@ -1,4 +1,5 @@
 ---
+laptop_user: creisor
 void_packages:
   - socklog-void
   - ansible
@@ -13,6 +14,8 @@ void_packages:
   - git
   - tmux
   - dropbox
+
+vim_packages:
   - vim
   - gvim
   - supercollider
