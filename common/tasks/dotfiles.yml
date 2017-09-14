@@ -1,0 +1,9 @@
+---
+- name: clone dotfiles repo
+  git:
+    repo: git@github.com:creisor/dotfiles.git
+    dest: "/home/{{laptop_user}}/.dotfiles"
+    accept_hostkey: yes
+
+- name: run dotfiles linking script
+  command: "/home/{{laptop_user}}/.dotfiles/link_dotfiles.sh"

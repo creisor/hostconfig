@@ -5,3 +5,6 @@
 
 - include: vim.yml
   tags: ['vim']
+
+- include: dotfiles.yml
+  tags: ['dotfiles']
