@@ -21,5 +21,5 @@ This role was initialized with
   * gimp
 * video
   * WidevineCdm
-  * shotcut
+  * openshot
 * pyenv / rbenv

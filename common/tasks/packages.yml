@@ -1,9 +1,10 @@
 ---
-- name: install packages
+- name: install void linux packages
   package:
     name: "{{item}}"
     state: latest
     #use: xbps
   with_items: "{{void_packages}}"
+  when: ansible_distribution == 'void'
 
 # pip: pip install nvpy
