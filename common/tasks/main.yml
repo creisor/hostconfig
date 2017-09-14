@@ -2,3 +2,6 @@
 - include: packages.yml
   tags: ['packages']
   become: yes
+
+- include: vim.yml
+  tags: ['vim']
