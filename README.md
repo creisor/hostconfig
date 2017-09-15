@@ -12,7 +12,9 @@ This role was initialized with
     ansbile-galaxy init common
 
 ## TODO
-* dotfiles
+* ~~dotfiles~~
+* themes
+  * https://github.com/sixsixfive/0nyX
 * fonts
   * Inconsolata (Google fonts)
 * audio
