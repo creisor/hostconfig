@@ -1,0 +1,21 @@
+---
+- name: deterime if onyx is already installed
+  stat:
+    path: "/usr/local/share/themes/0nyX"
+  register: onyx_stat
+
+- block:
+  - name: transfer onyx script
+    copy:
+      src: install_onyx.sh
+      dest: /tmp/
+      mode: 0755
+
+  - name: get onyx theme
+    command: /tmp/install_onyx.sh
+    register: install_onyx_out
+    become: yes
+
+  - debug:
+      var: install_onyx_out
+  when: not onyx_stat.stat.exists

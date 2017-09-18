@@ -1,6 +1,6 @@
 ---
-# note: should this just be localhost to make life easier?
 - hosts: laptops
   roles:
     - { role: common, tags: ['common'] }
     - { role: development, tags: ['dev', 'development'] }
+    - { role: gui, tags: ['gui'] }
