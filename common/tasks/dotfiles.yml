@@ -7,3 +7,7 @@
 
 - name: run dotfiles linking script
   command: "/home/{{laptop_user}}/.dotfiles/link_dotfiles.sh"
+#  register: cmd_results
+
+#- debug:
+#    var: cmd_results

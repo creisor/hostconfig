@@ -12,13 +12,30 @@ void_packages:
   - xfce4
   - xsel
   - git
+  - curl
+  - wget
   - tmux
   - dropbox
+  - faenza-icon-theme
+  - virtualbox-ose
+  - virtualbox-ose-guest
+  - docker
+  - docker-compose
 
 vim_packages:
   - vim
   - gvim
   - supercollider
+
+dev_packages:
+  - go
+  - go-cross-darwin
+  - go-cross-freebsd
+  - go-cross-linux
+  - go-cross-windows
+  - go-gdm
+  - llvm
+  - zlib-devel
 
 pip_packages:
   - nvpy

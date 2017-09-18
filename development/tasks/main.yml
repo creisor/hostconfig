@@ -1,0 +1,36 @@
+---
+#TODO: figure out why go always marks as changed
+- name: install development packages
+  package:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{dev_packages}}"
+  become: yes
+
+- name: determine if pyenv is installed
+  stat:
+    path: "/home/{{laptop_user}}/.pyenv"
+  register: pyenv_stat
+
+- block:
+  - name: download pyenv
+    get_url:
+      url: 'https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer'
+      dest: "/tmp/pyenv-installer"
+
+  - name: install pyenv
+    command: bash /tmp/pyenv-installer
+    register: cmd_results
+
+  #- debug:
+  #    var: cmd_results
+
+  - name: update .bashrc with pyenv path
+    blockinfile:
+      path: "/home/{{laptop_user}}/.bashrc"
+      block: |
+        export PATH="~/.pyenv/bin:$PATH"
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+      state: present
+  when: not pyenv_stat.stat.exists
