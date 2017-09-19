@@ -3,3 +3,4 @@
 - hosts: laptops
   roles:
     - { role: common, tags: ['common'] }
+    - { role: development, tags: ['dev', 'development'] }
