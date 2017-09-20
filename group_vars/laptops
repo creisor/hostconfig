@@ -21,6 +21,7 @@ void_packages:
   - virtualbox-ose-guest
   - docker
   - docker-compose
+  - albert
 
 vim_packages:
   - vim
