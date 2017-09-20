@@ -39,3 +39,7 @@ dev_packages:
 
 pip_packages:
   - nvpy
+
+xfce_themes:
+  rele:
+    url: "http://files.customize.org/download/files/60244/rele-xfce4.tar.bz2"
