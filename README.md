@@ -22,7 +22,7 @@ This role was initialized with
 ## TODO
 * ~~dotfiles~~
 * themes
-  * https://github.com/sixsixfive/0nyX
+  * --https://github.com/sixsixfive/0nyX--
 * fonts
   * Inconsolata (Google fonts)
 * audio
@@ -30,6 +30,6 @@ This role was initialized with
 * graphics
   * gimp
 * video
-  * WidevineCdm
+  * --WidevineCdm--
   * openshot
 * pyenv / rbenv

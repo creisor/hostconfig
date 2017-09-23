@@ -4,3 +4,4 @@
     - { role: common, tags: ['common'] }
     - { role: development, tags: ['dev', 'development'] }
     - { role: gui, tags: ['gui'] }
+    - { role: video, tags: ['video'] }

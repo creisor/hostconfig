@@ -1,0 +1,11 @@
+---
+#- include: widevine.yml
+#  tags: ['widevine']
+#  become: yes
+
+- name: install video packages
+  package:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{video_packages}}"
+  become: yes

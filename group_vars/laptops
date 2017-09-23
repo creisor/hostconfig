@@ -38,6 +38,13 @@ dev_packages:
   - llvm
   - zlib-devel
 
+video_packages:
+  - void-repo-nonfree
+  - chromium-widevine
+  - xfce4-mixer
+  - openshot
+  - vlc
+
 pip_packages:
   - nvpy
 
