@@ -8,3 +8,6 @@
 
 - include: dotfiles.yml
   tags: ['dotfiles']
+
+- include: git.yml
+  tags: ['git']
