@@ -1,5 +1,5 @@
 ---
-- name: install packages
+- name: install vim-related packages
   package:
     name: "{{item}}"
     state: latest

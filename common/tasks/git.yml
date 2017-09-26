@@ -1,0 +1,6 @@
+---
+- name: download git completion script
+  get_url:
+    url: https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+    dest: "/home/{{laptop_user}}/.git-completion.bash"
+    mode: 0755

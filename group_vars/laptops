@@ -3,6 +3,7 @@ laptop_user: creisor
 void_packages:
   - socklog-void
   - ansible
+  - python-bashlex
   - xorg
   - xterm
   - lightdm
@@ -22,6 +23,7 @@ void_packages:
   - docker
   - docker-compose
   - albert
+  - acpi
 
 vim_packages:
   - vim
