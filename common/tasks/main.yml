@@ -11,3 +11,7 @@
 
 - include: git.yml
   tags: ['git']
+
+- include: fonts.yml
+  tags: ['fonts']
+  become: yes
