@@ -1,0 +1,10 @@
+---
+- name: install inconsolata font
+  copy:
+    src: "{{item}}"
+    dest: /usr/share/fonts/TTF/
+    owner: root
+    mode: 0644
+  with_items:
+    - Inconsolata-Bold.ttf
+    - Inconsolata-Regular.ttf
