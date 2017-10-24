@@ -1,3 +1,6 @@
 ---
 - include: onyx.yml
   tags: ['onyx']
+
+- include: openzone.yml
+  tags: ['openzone', 'icons']
