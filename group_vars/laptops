@@ -24,6 +24,12 @@ void_packages:
   - docker-compose
   - albert
   - acpi
+  - foomatic-db
+  - foomatic-db-nonfree
+  - system-config-printer
+  - cups
+#  - cups-filters
+  - libcups
 
 vim_packages:
   - vim

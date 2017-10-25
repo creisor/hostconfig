@@ -1,0 +1,26 @@
+---
+- name: ensure .icons directory has been created
+  file:
+    path: "/home/{{laptop_user}}/.icons"
+    state: directory
+    mode: 0755
+
+- name: determine if OpenZone has been installed
+  stat:
+    path: "/home/{{laptop_user}}/.icons/OpenZone"
+  register: openzone
+
+- block:
+  - name: transfer openzone script
+    copy:
+      src: install_openzone.sh
+      dest: /tmp/
+      mode: 0755
+
+  - name: install openzone icons
+    command: "/tmp/install_openzone.sh {{laptop_user}}"
+    register: install_openzone_out
+
+  - debug:
+      var: install_openzone_out
+  when: not openzone.stat.exists
