@@ -1,0 +1,7 @@
+---
+- name: install audo packages
+  package:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{audio_packages}}"
+  become: yes

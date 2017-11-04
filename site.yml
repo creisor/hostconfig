@@ -5,3 +5,4 @@
     - { role: development, tags: ['dev', 'development'] }
     - { role: gui, tags: ['gui'] }
     - { role: video, tags: ['video'] }
+    - { role: audio, tags: ['audio'] }
