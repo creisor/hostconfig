@@ -53,6 +53,10 @@ video_packages:
   - openshot
   - vlc
 
+audio_packages:
+  - clementine
+  - clementine-spotify
+
 pip_packages:
   - nvpy
 
