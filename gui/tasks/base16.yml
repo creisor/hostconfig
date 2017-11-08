@@ -1,0 +1,18 @@
+---
+- name: clone base16 repo
+  git:
+    repo: git@github.com:afg984/base16-xfce4-terminal.git 
+    dest: "/tmp/base16-xfce4-terminal"
+    accept_hostkey: yes
+
+- name: ensure destination exists
+  file:
+    path: "/home/{{laptop_user}}/.local/share/xfce4/terminal/colorschemes"
+    mode: 0755
+    owner: "{{laptop_user}}"
+    group: "{{laptop_user}}"
+    state: directory
+
+- name: copy base16 files
+  shell: "cp /tmp/base16-xfce4-terminal/colorschemes/*.theme /home/{{laptop_user}}/.local/share/xfce4/terminal/colorschemes/"
+
