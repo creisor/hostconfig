@@ -4,3 +4,6 @@
 
 - include: openzone.yml
   tags: ['openzone', 'icons']
+
+- include: base16.yml
+  tags: ['base16']
