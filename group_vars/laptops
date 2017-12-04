@@ -30,6 +30,9 @@ void_packages:
   - cups
 #  - cups-filters
   - libcups
+  - lsof
+  - mhddfs
+  - udevil
 
 vim_packages:
   - vim
@@ -52,10 +55,22 @@ video_packages:
   - xfce4-mixer
   - openshot
   - vlc
+  - cheese
+  - gimp
+  - ufraw-gimp
 
 audio_packages:
   - clementine
   - clementine-spotify
+  - jack
+  - mpg123-jack
+  - qjackctl
+  - alsa-plugins-jack
+  - zynaddsubfx
+  - zynaddsubfx-data
+  - hydrogen
+  - a2jmidid
+  - ardour
 
 pip_packages:
   - nvpy
