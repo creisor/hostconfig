@@ -1,5 +1,5 @@
 ---
-- name: install audo packages
+- name: install audio packages
   package:
     name: "{{item}}"
     state: latest
