@@ -33,6 +33,10 @@ void_packages:
   - lsof
   - mhddfs
   - udevil
+  - nmap
+  - zenmap
+  - xtools
+  - libreoffice
 
 vim_packages:
   - vim
