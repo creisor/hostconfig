@@ -76,6 +76,13 @@ audio_packages:
   - hydrogen
   - a2jmidid
   - ardour
+  - lmms
+  - alsa-firmware
+  - alsa-plugins
+  - alsa-plugins-jack
+  - alsa-tools
+  - alsa-utils
+  - python-alsa
 
 pip_packages:
   - nvpy
