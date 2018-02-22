@@ -15,3 +15,11 @@
 - include: fonts.yml
   tags: ['fonts']
   become: yes
+
+- include: xbps.yml
+  tags: ['xbps']
+  become: yes
+
+- include: printing.yml
+  tags: ['printer', 'printing']
+  become: yes

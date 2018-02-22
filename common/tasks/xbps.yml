@@ -1,0 +1,10 @@
+---
+- name: add US xbps repository
+  lineinfile:
+    path: '/usr/share/xbps.d/00-repository-main.conf'
+    regexp: '^repository='
+    line: "repository={{xbps_repo_us}}"
+    backrefs: no
+    owner: root
+    group: root
+    mode: 0644

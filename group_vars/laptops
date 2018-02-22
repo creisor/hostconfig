@@ -28,7 +28,7 @@ void_packages:
   - foomatic-db-nonfree
   - system-config-printer
   - cups
-#  - cups-filters
+  - cups-filters
   - libcups
   - lsof
   - mhddfs
@@ -37,6 +37,7 @@ void_packages:
   - zenmap
   - xtools
   - libreoffice
+  - rsync
 
 vim_packages:
   - vim
@@ -82,3 +83,5 @@ pip_packages:
 xfce_themes:
   rele:
     url: "http://files.customize.org/download/files/60244/rele-xfce4.tar.bz2"
+
+xbps_repo_us: "https://lug.utdallas.edu/mirror/void/current/"
