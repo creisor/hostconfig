@@ -1,4 +1,6 @@
 ---
+# TODO: figure out how to make sure the right packages get installed for the
+# right distro (void for void, arch for arch)
 - name: install vim-related packages
   package:
     name: "{{item}}"

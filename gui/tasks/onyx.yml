@@ -1,4 +1,5 @@
 ---
+# TODO: determine if this path is correct for Arch
 - name: deterime if onyx is already installed
   stat:
     path: "/usr/local/share/themes/0nyX"

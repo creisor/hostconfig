@@ -19,6 +19,7 @@
 - include: xbps.yml
   tags: ['xbps']
   become: yes
+  when: ansible_distribution == 'void'
 
 - include: printing.yml
   tags: ['printer', 'printing']
