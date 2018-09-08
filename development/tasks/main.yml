@@ -1,5 +1,6 @@
 ---
 #TODO: figure out why go always marks as changed
+# TODO: ensure the right packages get installed for the right distro
 - name: install development packages
   package:
     name: "{{item}}"

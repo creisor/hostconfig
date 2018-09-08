@@ -7,4 +7,5 @@
   with_items: "{{void_packages}}"
   when: ansible_distribution == 'void'
 
+# TODO: add arch linux packages
 # pip: pip install nvpy

@@ -1,4 +1,5 @@
 ---
+# TODO: ensure these paths are still correct for Arch
 - name: install inconsolata font
   copy:
     src: "{{item}}"

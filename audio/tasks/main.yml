@@ -1,4 +1,5 @@
 ---
+# TODO: ensure the right packages get installed for the right distro
 - name: install audio packages
   package:
     name: "{{item}}"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: ensure this path is correct for Arch
+
 # ref: https://github.com/sixsixfive/0nyX#manual
 prefix=/usr/local
 

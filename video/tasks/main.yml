@@ -3,6 +3,7 @@
 #  tags: ['widevine']
 #  become: yes
 
+# TODO: ensure correct packages get installed for correct distro
 - name: install video packages
   package:
     name: "{{item}}"
