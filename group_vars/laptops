@@ -38,6 +38,7 @@ void_packages:
   - xtools
   - libreoffice
   - rsync
+  - gvfs
 
 vim_packages:
   - vim
