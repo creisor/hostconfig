@@ -1,0 +1,18 @@
+- name: Check if Homebrew is installed
+  ansible.builtin.stat:
+    path: /opt/homebrew/bin/brew
+  register: brew_check
+  when: ansible_facts['os_family'] == "Darwin"
+
+- name: Fail if Homebrew is not installed
+  ansible.builtin.fail:
+    msg: >
+      Homebrew is not installed.
+      Please install it manually by running:
+
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+      Then re-run this playbook.
+  when:
+    - ansible_facts['os_family'] == "Darwin"
+    - not brew_check.stat.exists

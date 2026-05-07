@@ -1,6 +1,0 @@
----
-- name: enable cups
-  runit:
-    name: cupsd
-    state: started
-    enabled: yes

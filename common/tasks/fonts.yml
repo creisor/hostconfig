@@ -1,11 +1,8 @@
 ---
-# TODO: ensure these paths are still correct for Arch
+# Note: inconsolata nerd font is installed as a Cask on macs
+- name: fnt update
+  ansible.builtin.command: fnt  update
+
 - name: install inconsolata font
-  copy:
-    src: "{{item}}"
-    dest: /usr/share/fonts/TTF/
-    owner: root
-    mode: 0644
-  with_items:
-    - Inconsolata-Bold.ttf
-    - Inconsolata-Regular.ttf
+  ansible.builtin.command: fnt install google-inconsolata
+

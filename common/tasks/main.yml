@@ -1,26 +1,12 @@
 ---
-- include: packages.yml
+- import_tasks: packages.yml
   tags: ['packages']
-  become: yes
 
-- include: vim.yml
+- import_tasks: vim.yml
   tags: ['vim']
 
-- include: dotfiles.yml
+- import_tasks: dotfiles.yml
   tags: ['dotfiles']
 
-- include: git.yml
-  tags: ['git']
-
-- include: fonts.yml
+- import_tasks: fonts.yml
   tags: ['fonts']
-  become: yes
-
-- include: xbps.yml
-  tags: ['xbps']
-  become: yes
-  when: ansible_distribution == 'void'
-
-- include: printing.yml
-  tags: ['printer', 'printing']
-  become: yes

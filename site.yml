@@ -1,8 +1,6 @@
 ---
-- hosts: laptops
+- hosts:
+    - linux
+    - mac
   roles:
     - { role: common, tags: ['common'] }
-    - { role: development, tags: ['dev', 'development'] }
-    - { role: gui, tags: ['gui'] }
-    - { role: video, tags: ['video'] }
-    - { role: audio, tags: ['audio'] }

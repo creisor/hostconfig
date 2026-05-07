@@ -1,11 +1,27 @@
 ---
-- name: install void linux packages
-  package:
-    name: "{{item}}"
-    state: latest
-    #use: xbps
-  with_items: "{{void_packages}}"
-  when: ansible_distribution == 'void'
+- name: Resolve platform-specific package names
+  set_fact:
+    resolved_packages: >-
+      {{ packages.default + packages[ansible_facts['os_family']] | unique | list }}
 
-# TODO: add arch linux packages
-# pip: pip install nvpy
+
+- name: Install packages on Linux
+  ansible.builtin.package:
+    name: "{{ resolved_packages }}"
+    state: present
+  become: true
+  when: ansible_facts['os_family'] != "Darwin"
+
+- import_tasks: homebrew.yml
+
+- name: Install packages on macOS via Homebrew
+  community.general.homebrew:
+    name: "{{ resolved_packages }}"
+    state: present
+  when: ansible_facts['os_family'] == "Darwin"
+
+- name: Install casks
+  community.general.homebrew_cask:
+    name: "{{ cask_packages }}"
+    state: present
+  when: ansible_facts['os_family'] == "Darwin"

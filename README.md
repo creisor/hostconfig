@@ -9,27 +9,14 @@ Basic setup, basic packages.
 
 This role was initialized with
 
-    ansbile-galaxy init common
+```
+ansbile-galaxy init common
+```
 
-### development
+## Cheatsheet
 
-Languages and tools for development
+Install packages on Macbook only:
 
-This role was initialized with
-
-    ansible-galaxy init development
-
-## TODO
-* ~~dotfiles~~
-* themes
-  * --https://github.com/sixsixfive/0nyX--
-* fonts
-  * Inconsolata (Google fonts)
-* audio
-  * sonic-pi
-* graphics
-  * gimp
-* video
-  * --WidevineCdm--
-  * openshot
-* pyenv / rbenv
+```
+ansible-playbook -i inventory --limit mac --tags packages site.yml
+```

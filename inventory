@@ -1,2 +1,13 @@
-[laptops]
-localhost ansible_connection=local
+---
+linux:
+  hosts:
+    chris-precision5520.local:
+      laptop_user: creisor
+      ansible_user: creisor
+
+mac:
+  hosts:
+    localhost:
+      ansible_connection: local
+      laptop_user: chris
+      ansible_user: chris 

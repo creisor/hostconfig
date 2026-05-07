@@ -2,11 +2,11 @@
 - name: clone dotfiles repo
   git:
     repo: git@github.com:creisor/dotfiles.git
-    dest: "/home/{{laptop_user}}/.dotfiles"
+    dest: "{{ansible_facts['user_dir']}}/git/dotfiles"
     accept_hostkey: yes
 
 - name: run dotfiles linking script
-  command: "/home/{{laptop_user}}/.dotfiles/link_dotfiles.sh"
+  command: "{{ansible_facts['user_dir']}}/.dotfiles/link_dotfiles.sh"
 #  register: cmd_results
 
 #- debug:

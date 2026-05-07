@@ -1,22 +1,26 @@
 ---
-# TODO: figure out how to make sure the right packages get installed for the
-# right distro (void for void, arch for arch)
-- name: install vim-related packages
-  package:
-    name: "{{item}}"
-    state: latest
-  with_items: "{{vim_packages}}"
+- name: clone neovim dotfiles repo
+  ansible.builtin.git:
+    repo: git@github.com:creisor/dotconfig-nvim.git
+    dest: "{{ansible_facts['user_dir']}}/git/dotconfig-nvim"
+    accept_hostkey: yes
+
+- name: symlink nvim config
+  file:
+    src: "{{ansible_facts['user_dir']}}/git/dotconfig-nvim"
+    dest: "{{ansible_facts['user_dir']}}/.config/nvim"
+    owner: "{{ansible_user}}"
+    state: link
 
 - name: clone vimrc repo
   git:
     repo: git@github.com:creisor/.vim.git
-    dest: "/home/{{laptop_user}}/.vim"
+    dest: "{{ansible_facts['user_dir']}}/git/.vim"
     accept_hostkey: yes
 
 - name: symlink .vimrc
   file:
-    src: "/home/{{laptop_user}}/.vim/vimrc"
-    dest: "/home/{{laptop_user}}/.vimrc"
-    owner: "{{laptop_user}}"
-    group: "{{laptop_user}}"
+    src: "{{ansible_facts['user_dir']}}/git/.vim/vimrc"
+    dest: "{{ansible_facts['user_dir']}}/.vimrc"
+    owner: "{{ansible_user}}"
     state: link
